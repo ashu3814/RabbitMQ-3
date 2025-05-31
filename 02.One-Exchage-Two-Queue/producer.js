@@ -17,8 +17,11 @@ async function createMailProducer(){
         await channel.assertQueue(queueName2, { durable: true });
 
         // Bind the queues to the exchange with different routing keys
-        await channel.bindQueue(queueName1, exchangeName, 'email1');
-        await channel.bindQueue(queueName2, exchangeName, 'email2');
+        const routingKey1 = 'email1';
+        const routingKey2 = 'email2';
+
+        await channel.bindQueue(queueName1, exchangeName, routingKey1);
+        await channel.bindQueue(queueName2, exchangeName, routingKey2);
 
         // Send a message to each queue via the exchange with different routing keys
         const message1 = { text: 'Hello, this is a message for Queue 1!' };
