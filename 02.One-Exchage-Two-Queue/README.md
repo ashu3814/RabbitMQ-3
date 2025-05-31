@@ -6,12 +6,13 @@ This project demonstrates a RabbitMQ setup with **one exchange and two queues** 
 
 ```mermaid
 flowchart LR
-    Producer -->|Publishes Message (email1)| Exchange
-    Producer -->|Publishes Message (email2)| Exchange
-    Exchange -- email1 --> Queue1
-    Exchange -- email2 --> Queue2
-    Queue1 -->|Delivers Message| Consumer1
-    Queue2 -->|Delivers Message| Consumer2
+    Producer -->|"Publishes Message (email1)"| Exchange
+    Producer -->|"Publishes Message (email2)"| Exchange
+    Exchange -- "email1" --> Queue1
+    Exchange -- "email2" --> Queue2
+    Queue1 -->|"Delivers Message"| Consumer1
+    Queue2 -->|"Delivers Message"| Consumer2
+
 ```
 
 ## Files
