@@ -6,9 +6,10 @@ This project demonstrates a simple RabbitMQ setup with one exchange and one queu
 
 ```mermaid
 flowchart LR
-    Producer --|Publishes Message|> Exchange
-    Exchange --|Routes Message|> Queue
-    Queue --|Delivers Message|> Consumer
+    Producer -->|Publishes Message| Exchange
+    Exchange -->|Routes Message| Queue
+    Queue -->|Delivers Message| Consumer
+
 ```
 
 ## Files
