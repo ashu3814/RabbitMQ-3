@@ -1,1 +1,0 @@
-# RabbitMQ-3
